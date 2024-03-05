@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+:root{
+    --clr-accent: #d9964a; 
+    --clr-blue: #0b5089;
+    --clr-dark: #2b2b2b;
+    --clr-light: #ffffff;
+    --clr-border: #f9e9d7; 
+    --clr-gray: #666666;
+    --font-primary: "Mulish", sans-serif;
+    --font-secondary: "Playfair Display", serif;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  font,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    scroll-behavior: smooth;
+    list-style: none;
+  }
+  html {
+    font-size: 62.5%;
+    height: 100%;
+  }
+  body {
+    color: var(--clr-dark);
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    line-height: 1.4;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  article,
+  aside,
+  footer,
+  header,
+  nav,
+  section,
+  time {
+    display: block;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 5rem;
+  }
+
+  /* HEADER */
+  .header{
+    background-color: var(--clr-light);
+    padding: 1rem 0;
+    box-shadow: rgba(0, 0, 0, 0.24)0px 3px 8px;
+    position: fixed;
+    width: 100%;
+    height: 8rem;
+    z-index: 99999;
+  }
+    .header  h2 {
+        color: var(--clr-gray);
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 0.8rem;
+        margin-bottom: 5rem;
+        align-items: center;
+  }
+
+  /* BANNER */
+  .banner{
+    background-color: var(--clr-border);
+    padding-top: 15rem;
+    padding-bottom: 8rem;
+  }
+  .banner__content{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .banner .banner__wrapper{
+    display: grid;
+      /* grid-template-columns: 90rem 1fr; */
+      gap: 1rem;
+      align-items: center;
+  }
+  .banner .banner__wrapper .banner__left{
+    display: flex;
+    flex-direction: column;
+    align-items:  flex-start;
+    align-content: center;
+    justify-content: center;
+  }
+  .banner .banner__wrapper .banner__left ul{
+    color: var(--clr-accent);
+    letter-spacing: 2rem;
+    margin-bottom: 2rem;
+    
+  }
+  .banner .banner__wrapper .banner__content .banner__left h2{
+    font-family: var(--font-secondary);
+    color:var(--clr-gray);
+    font-size: 3rem;
+      font-weight: 700;
+      margin-top: 0.8rem;
+      margin-bottom: 3rem;
+  }
+  .banner .banner__wrapper .banner__content .banner__left p{
+    margin-bottom: 2rem;
+    max-width: 65rem;
+    text-align: justify;
+  }
+ 
+  /* RECIPE OF THE WEEK */
+  .recipe{
+    background-color: var(--clr-light);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .recipe .recipe__title h2 {
+    color: var(--clr-accent);
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 0.8rem;
+    margin-bottom: 5rem;
+    margin-left: 2rem;
+    text-align: center;
+  }
+
+  .recipe .recipe__title h2::before {
+    display: inline-block;
+    position: relative;
+    content: " ";
+    background-color: var(--clr-accent);
+    width: 36%;
+    height: 0.1rem;
+    bottom: 0.7rem;
+    justify-content: center;
+    margin-right: 2rem;
+  }
+  .recipe .recipe__title h2::after {
+    display: inline-block;
+    position: relative;
+    content: " ";
+    background-color: var(--clr-accent);
+    width: 36%;
+    height: 0.1rem;
+    bottom: 0.7rem;
+    justify-content: center;
+    margin-left: 2rem;
+  }
+
+  .recipe__content{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .recipe__cards{
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+  .recipe .recipe__wrapper .recipe__card ul{
+    color: var(--clr-accent);
+    letter-spacing: 1rem;
+    margin-top: 2rem;
+  }
+  .recipe .recipe__wrapper .recipe__card .recipe__card--Title h4{
+    color: var(--clr-gray);
+    font-family: var(--font-secondary);
+    /* font-size: 2rem; */
+    font-weight: 700;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .recipe .recipe__wrapper .recipe__card .recipe__card--Title .recipe__card--Details{
+    text-align: justify;
+    align-content: center;
+  }
+
+/* RECIPE COLLECTION */
+.recipecol{
+    background-color: var(--clr-light);
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+  }
+  .recipecol .recipecol__content{
+    display: flex;
+    
+  }
+  .recipecol .recipecol__title h2 {
+    color: var(--clr-accent);
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 0.8rem;
+    margin-bottom: 5rem;
+    
+  }
+  .recipecol .recipecol__title h2::after{
+    display: inline-block;
+    position: relative;
+    content: " ";
+    background-color: var(--clr-accent);
+    width: 75%;
+    height: 0.1rem;
+    bottom: 0.7rem;
+    justify-content: center;
+    margin-left: 2rem;
+  }
+  .recipecol__content{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .recipecol .banner__wrapper{
+    display: grid;
+      /* grid-template-columns: 90rem 1fr; */
+      gap: 2rem;
+      align-items: center;
+  }
+  .recipecol__left {
+    width: 50%;
+}
+  .recipecol .recipecol__wrapper .recipecol__right{
+    display: flex;
+    flex-direction: column;
+    align-items:  flex-start;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+  }
+  .recipecol .recipecol__wrapper .recipecol__right ul{
+    color: var(--clr-accent);
+    letter-spacing: 2rem;
+    margin-bottom: 2rem;
+    
+  }
+
+  .recipecol .recipecol__wrapper .recipecol__content .recipecol__right h2{
+    font-family: var(--font-secondary);
+    color: var(--clr-gray);
+    font-size: 3rem;
+      font-weight: 700;
+      margin-top: 0.8rem;
+      margin-bottom: 2rem;
+  }
+  .recipecol .recipecol__wrapper .recipecol__content .recipecol__right p{
+    margin-bottom: 3rem;
+    max-width: 65rem;
+    text-align: justify;
+  }
+.recipecol .recipecol__wrapper .recipe__content:nth-child(odd){
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+.recipecol .recipecol__wrapper .recipe__content:nth-child(even){
+    display: flex;
+    flex-direction: row;
+}
+.recipecol__wrapper div:nth-child(even){
+    flex-direction: row-reverse;
+  }
+
+/* NEWSLETTER */
+
+.newsletter {
+    background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2)),url(./img/newsletter.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 60rem;
+    /* padding-top: 10rem; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .newsletter .newsletter__title h2{
+    color: var(--clr-light);
+    font-family: var(--font-secondary);
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .newsletter .newsletter__title p{
+    color: var(--clr-light);
+    text-align: center;
+  }
+  .newsletter .newsletter__content{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .newsletter .newsletter__content .newsletter__button{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    
+  }
+    .newsletter .newsletter__title .newsletter__button input{
+      height: 4rem;
+        width: 30rem;
+        background-color: var(--clr-light);
+        border: 1px solid var(--clr-light);
+        opacity: 80%;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+  .newsletter .newsletter__title .newsletter__button button{
+    height: 4rem;
+      width: 15rem;
+      background-color: var(--clr-accent);
+      color: #ffffff;
+      border-style: none;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+  }
+  
+  
+
+/* CLASSIC COLLECTION */
+
+.collection{
+    background-color: var(--clr-light);
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+  .collection .collection__content{
+    display: flex;
+    
+  }
+  .collection .collection__title h2 {
+    color: var(--clr-accent);
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 0.8rem;
+    margin-bottom: 5rem;
+    
+  }
+  .collection .collection__title h2::after{
+    display: inline-block;
+    position: relative;
+    content: " ";
+    background-color: var(--clr-accent);
+    width: 75%;
+    height: 0.1rem;
+    bottom: 0.7rem;
+    justify-content: center;
+    margin-left: 2rem;
+  }
+  .collection .collection__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  .collection .collection__items{
+    display:flex;
+    flex-direction: row;
+    gap: 1rem;
+
+  }
+  .collection .collection__wrapper .collection__items .collection__left{
+    width:25%;
+  }
+  .collection .collection__wrapper .collection__items .collection__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    width:51%;
+  }
+  .collection__items{
+    display:flex;
+    gap: 2rem;
+  }
+  .collection .collection__star ul{
+    display: flex;
+    flex-direction: row;
+    color: var(--clr-accent);
+  }
+  .collection .collection__wrapper .collection__right h6{
+    color: var(--clr-accent);
+    letter-spacing: 1rem;
+  }
+  .collection .collection__wrapper .collection__right h2{
+    color: var(--clr-gray);
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    
+  }
+
+  /* FOOTER */
+.footer{
+    padding: 2rem 0;
+    background-color: var(--clr-border);
+    color: var(--clr-gray);
+  }
+  .footer .footer__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-content: center;
+    align-items: center;
+  }
+    .footer .footer__wrapper .footerNav tr{
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
+  .footer .footer__wrapper h4{
+    color: var(--clr-gray);
+        font-size: 2.5rem;
+        font-weight: 700;
+  }
+  
+
+    /* REPEATABLE PATTERNS */
+    .btn{
+        background-color: transparent;
+        border: transparent;
+        padding: 1rem 2rem;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        color: transparent;
+        /* font-weight: 700; */
+      }
+      .btn.bg--accent{
+        background-color: var(--clr-accent);
+        color: var(--clr-light);
+      }
+        .btn.bg--dark {
+          background-color: var(--clr-dark);
+          color: var(--clr-semilight);
+      
+        }
+      .btn.bg--accentt:hover{
+        background-color: var(--clr-light);
+        color: var(--clr-accent);
+      }
+      .btn--nobg{
+        color:var(--clr-primary);
+      }
+      .btn--nobg:hover{
+        color: darken var(--clr-primary);
+      }
+      .btn.bg--light{
+        background-color: var(--clr-light);
+        color: var(--clr-dark)
+      }
+      .btn.btn.bg--light:hover{
+        background-color: var(--clr-dark);
+        color: var(--clr-light)
+      }
+ 
+ 
